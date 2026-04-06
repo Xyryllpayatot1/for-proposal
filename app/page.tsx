@@ -68,6 +68,12 @@ export default function Home() {
               <button className="topbar-btn">&#8249;</button>
               <button className="topbar-btn">&#8250;</button>
             </div>
+            <div className="topbar-logo-mobile">
+              <div className="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" /></svg>
+              </div>
+              <span>Band<em>Store</em></span>
+            </div>
             <div className="topbar-actions">
               <button className="topbar-pill outline">Log in</button>
               <button className="topbar-pill">Sign up</button>
@@ -254,7 +260,7 @@ export default function Home() {
             {/* CTA */}
             <div className="cta-strip">
               <h2>Ready to sell your music?</h2>
-              <p>Message me and we will have your store live in 3 weeks.</p>
+              <p>Message me and we will have your store live in 1 week.</p>
               <button className="cta-btn-green">Let&apos;s Work Together</button>
             </div>
           </div>
@@ -303,7 +309,39 @@ export default function Home() {
           </button>
           <div className="vol-bar"><div className="vol-fill" /></div>
         </div>
+        {/* Mobile-only controls inside player bar */}
+        <div className="player-mobile-controls">
+          <button className="ctrl-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20" /><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" strokeWidth="2" /></svg>
+          </button>
+          <button className="ctrl-btn main-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+          </button>
+          <button className="ctrl-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4" /><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" strokeWidth="2" /></svg>
+          </button>
+        </div>
       </div>
+
+      {/* MOBILE BOTTOM NAV */}
+      <nav className="mobile-nav">
+        <a href="#" className="active">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+          Home
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+          Search
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></svg>
+          Library
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+          Liked
+        </a>
+      </nav>
     </>
   );
 }

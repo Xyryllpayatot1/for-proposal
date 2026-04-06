@@ -14,13 +14,15 @@
   --mobile-nav-h: 60px;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  height: 100%;
+}
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -460,8 +462,6 @@ body {
   :root {
     --player-h: 64px;
   }
-
-  body { overflow: hidden; }
 
   .app {
     min-height: 0;

@@ -630,6 +630,35 @@
       font-weight: 700;
       flex-shrink: 0;
     }
+    .price-card .buy-btn {
+      display: block;
+      width: 100%;
+      margin-top: 24px;
+      background: var(--green);
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.5px;
+    }
+    .price-card .buy-btn:hover { background: #1ed760; transform: scale(1.02); }
+    .price-card.featured .buy-btn {
+      background: var(--green);
+    }
+    .price-card:not(.featured) .buy-btn {
+      background: transparent;
+      border: 1px solid var(--text-dim);
+      color: var(--text);
+    }
+    .price-card:not(.featured) .buy-btn:hover {
+      border-color: var(--text);
+      background: rgba(255,255,255,0.05);
+      transform: scale(1.02);
+    }
 
     /* CTA strip */
     .cta-strip {
@@ -1063,45 +1092,44 @@
           </div>
           <div class="pricing-row">
             <div class="price-card">
-              <h3>Starter</h3>
-              <div class="amount">$499 <small>fixed</small></div>
-              <div class="tagline">Up to 10 songs, MP3 downloads, basic SEO, Stripe payouts.</div>
+              <h3>Single Track</h3>
+              <div class="amount">$1.99 <small>/ song</small></div>
+              <div class="tagline">Buy any individual song from the catalog. Instant download after purchase.</div>
               <ul>
-                <li>Up to 10 songs</li>
-                <li>MP3 downloads</li>
-                <li>Stripe payment + payouts</li>
-                <li>Basic SEO setup</li>
-                <li>Deployed on Vercel</li>
+                <li>1 song of your choice</li>
+                <li>MP3 download (320kbps)</li>
+                <li>Instant delivery to your email</li>
+                <li>Personal use license</li>
               </ul>
+              <button class="buy-btn">Buy a Single</button>
             </div>
             <div class="price-card featured">
-              <span class="rec-tag">Recommended</span>
-              <h3>Professional</h3>
-              <div class="amount">$899 <small>fixed</small></div>
-              <div class="tagline">Unlimited songs, MP3 + WAV, full SEO, admin dashboard.</div>
+              <span class="rec-tag">Best Value</span>
+              <h3>Full Album</h3>
+              <div class="amount">$9.99 <small>/ album</small></div>
+              <div class="tagline">Get the complete album — all tracks in one purchase at a discounted price.</div>
               <ul>
-                <li>Unlimited songs and albums</li>
-                <li>MP3 and WAV format support</li>
-                <li>Audio previews per track</li>
-                <li>Stripe with email receipts</li>
-                <li>Full SEO and Search Console</li>
-                <li>Admin dashboard</li>
-                <li>Custom domain setup</li>
-                <li>2 weeks post-launch support</li>
+                <li>All songs in the album</li>
+                <li>MP3 and WAV formats included</li>
+                <li>Instant download after payment</li>
+                <li>Secure download link via email</li>
+                <li>Personal use license</li>
+                <li>Direct payment to artist</li>
               </ul>
+              <button class="buy-btn">Buy Full Album</button>
             </div>
             <div class="price-card">
-              <h3>Premium</h3>
-              <div class="amount">$1,299 <small>fixed</small></div>
-              <div class="tagline">Everything in Professional plus mailing list, blog, and analytics.</div>
+              <h3>Complete Collection</h3>
+              <div class="amount">$24.99 <small>/ all</small></div>
+              <div class="tagline">Every song, every album, every release — the full discography in one bundle.</div>
               <ul>
-                <li>Everything in Professional</li>
-                <li>Mailing list signup</li>
-                <li>Booking and contact form</li>
-                <li>Blog and news section</li>
-                <li>Google Analytics setup</li>
-                <li>1 month post-launch support</li>
+                <li>All albums and singles</li>
+                <li>MP3 and WAV formats</li>
+                <li>Instant download after payment</li>
+                <li>Any future releases included</li>
+                <li>Personal use license</li>
               </ul>
+              <button class="buy-btn">Buy Everything</button>
             </div>
           </div>
         </div>

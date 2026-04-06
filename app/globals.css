@@ -30,7 +30,7 @@ body {
 .app {
   display: flex;
   flex: 1;
-  height: calc(100dvh - var(--player-h));
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -42,6 +42,7 @@ body {
   flex-direction: column;
   padding: 24px 12px;
   flex-shrink: 0;
+  min-height: 0;
   overflow-y: auto;
 }
 .sidebar-logo {
@@ -91,7 +92,9 @@ body {
 
 /* ── MAIN ────────────────────────────────────────── */
 .main {
-  flex: 1; overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
   background: linear-gradient(180deg, #1a3a2a 0%, var(--bg) 340px);
 }
 
@@ -461,7 +464,7 @@ body {
   body { overflow: hidden; }
 
   .app {
-    height: calc(100dvh - var(--player-h) - var(--mobile-nav-h));
+    min-height: 0;
   }
 
   /* Topbar */
